@@ -11,7 +11,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'mv ～/target/rocket-0.0.1-SNAPSHOT.jar /Users/lindaw/Documents/test/'
+        sh 'mv /Users/lindaw/.jenkins/workspace/DevOps_main/target/rocket-0.0.1-SNAPSHOT.jar /Users/lindaw/Documents/test/'
       }
     }
 
