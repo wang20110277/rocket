@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <springProfile name="product">
+    <springProfile name="prod">
         <include resource="logback-file.xml"/>
         <root level="error"> <!--Log Level: ERROR, WARN, INFO, DEBUG, TRACE.-->
             <appender-ref ref="FILE"/>
