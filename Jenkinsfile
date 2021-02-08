@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'zip -rqm ./rocket.zip ./rocket'
         sh 'mv ./rocket.zip /Users/lindaw/Documents/'
-        sh 'unzip /Users/lindaw/Documents/rocket.zip -d /Users/lindaw/Documents/'
+        sh 'unzip -o /Users/lindaw/Documents/rocket.zip -d /Users/lindaw/Documents/'
       }
     }
 
