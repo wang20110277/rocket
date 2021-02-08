@@ -3,14 +3,15 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn clean'
-        sh 'mvn install'
+        sh 'mvn clean package appassembler:assemble'
       }
     }
 
     stage('deploy') {
       steps {
-        sh 'mv /Users/lindaw/.jenkins/workspace/rocket_main/target/rocket-0.0.1-SNAPSHOT.jar /Users/lindaw/Documents/test/'
+        sh 'zip -rqm ./rocket.zip ./rocket'
+        sh 'mv ./rocket.zip /Users/lindaw/Documents/'
+        sh 'unzip /Users/lindaw/Documents/rocket.zip'
       }
     }
 
